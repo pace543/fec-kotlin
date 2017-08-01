@@ -2,6 +2,8 @@ package io.github.pace543.feckotlin
 
 import com.github.kittinunf.fuel.core.FuelError
 import com.github.kittinunf.fuel.core.FuelManager
+import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.rx.rx_object
 import com.github.kittinunf.result.Result
 import io.github.pace543.feckotlin.model.CalendarDatePage
 import io.github.pace543.feckotlin.model.ElectionDatePage
@@ -15,9 +17,12 @@ class Client(key: String) {
     }
 
     // /dates/ endpoints
-    fun getCalendarDates(params: ParamsList): OpenFECResult<CalendarDatePage>
-    fun getElectionDates(params: ParamsList): OpenFECResult<ElectionDatePage>
-    fun getReportingDates(params: ParamsList): OpenFECResult<ReportDatePage>
+    fun getCalendarDates(params: ParamsList? = null): OpenFECResult<CalendarDatePage> =
+            "/calendar-dates".httpGet(params).rx_object(CalendarDatePage.Deserializer())
+    fun getElectionDates(params: ParamsList? = null): OpenFECResult<ElectionDatePage> =
+            "/election-dates".httpGet(params).rx_object(ElectionDatePage.Deserializer())
+    fun getReportingDates(params: ParamsList? = null): OpenFECResult<ReportDatePage> =
+            "/reporting-dates".httpGet(params).rx_object(ReportDatePage.Deserializer())
 
     // /candidate/ endpoints
     fun getCandidate(candidateId: String, params: ParamsList): OpenFECResult<CandidateDetailPage>
