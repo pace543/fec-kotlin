@@ -261,6 +261,10 @@ data class CommitteeTotals(
         @Expose
         val candidateContribution: Double?,
 
+        @SerializedName("candidate_id")
+        @Expose
+        val candidateId: String?,
+
         @SerializedName("cash_on_hand_beginning_period")
         @Expose
         val cashOnHandBeginningPeriod: Double?,
@@ -336,6 +340,10 @@ data class CommitteeTotals(
         @SerializedName("federal_funds")
         @Expose
         val federalFunds: Double?,
+
+        @SerializedName("full_election")
+        @Expose
+        val fullElection: Boolean?,
 
         @SerializedName("fundraising_disbursements")
         @Expose
@@ -607,6 +615,10 @@ data class Candidate(
         @Expose
         val federalFundsFlag: Boolean?,
 
+        @SerializedName("flags")
+        @Expose
+        val flags: String?,
+
         @SerializedName("has_raised_funds")
         @Expose
         val hasRaisedFunds: Boolean?,
@@ -705,6 +717,10 @@ data class CandidateTotals(
         @Expose
         val cycles: List<Int>?,
 
+        @SerializedName("debts_owed_by_committee")
+        @Expose
+        val debtsOwedByCommittee: Double?,
+
         @SerializedName("disbursements")
         @Expose
         val disbursements: Double?,
@@ -776,6 +792,10 @@ data class CandidateTotals(
         @SerializedName("party_full")
         @Expose
         val partyFull: String?,
+
+        @SerializedName("receipts")
+        @Expose
+        val receipts: Double?,
 
         @SerializedName("state")
         @Expose

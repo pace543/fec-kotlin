@@ -56,14 +56,26 @@ class OpenFECClient(key: String, url: String = "https://api.open.fec.gov/v1") {
             "/committee/$committeeId/candidates/history/$cycle".httpGet(params).rx_object(CandidateHistoryPage.Deserializer())
 
     // /committee/ endpoints
-    fun getCommitteesFromCandidate(candidateId: String, params: ParamsList) {}
+    fun getCommitteesFromCandidate(candidateId: String, params: ParamsList? = null) =
+            "/candidate/$candidateId/committees".httpGet(params).rx_object(CommitteeDetailPage.Deserializer())
 
-    fun getCommitteesHistoryFromCandidate(candidateId: String, params: ParamsList) {}
-    fun getCommitteesHistoryByCycleFromCandidate(candidateId: String, cycle: Int, params: ParamsList) {}
-    fun getCommittee(committeeId: String, params: ParamsList) {}
-    fun getCommitteeHistory(committeeId: String, params: ParamsList) {}
-    fun getCommitteeHistoryByCycle(committeeId: String, cycle: Int, params: ParamsList) {}
-    fun getCommittees(params: ParamsList) {}
+    fun getCommitteesHistoryFromCandidate(candidateId: String, params: ParamsList? = null) =
+            "/candidate/$candidateId/committees/history".httpGet(params).rx_object(CommitteeHistoryPage.Deserializer())
+
+    fun getCommitteesHistoryByCycleFromCandidate(candidateId: String, cycle: Int, params: ParamsList? = null) =
+            "/candidate/$candidateId/committees/history/$cycle".httpGet(params).rx_object(CommitteeHistoryPage.Deserializer())
+
+    fun getCommittee(committeeId: String, params: ParamsList? = null) =
+            "/committee/$committeeId".httpGet(params).rx_object(CommitteeDetailPage.Deserializer())
+
+    fun getCommitteeHistory(committeeId: String, params: ParamsList? = null) =
+            "/committee/$committeeId/history".httpGet(params).rx_object(CommitteeHistoryPage.Deserializer())
+
+    fun getCommitteeHistoryByCycle(committeeId: String, cycle: Int, params: ParamsList? = null) =
+            "/committee/$committeeId/history/$cycle".httpGet(params).rx_object(CommitteeHistoryPage.Deserializer())
+
+    fun getCommittees(params: ParamsList? = null) =
+            "/committees".httpGet(params).rx_object(CommitteePage.Deserializer())
 
     // /filings/ endpoints
     fun getFilingsFromCandidate(candidateId: String, params: ParamsList) {}
