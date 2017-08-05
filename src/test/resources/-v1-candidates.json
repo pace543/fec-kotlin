@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "election_years": [
+        2004
+      ],
+      "district_number": 0,
+      "candidate_id": "P40002172",
+      "candidate_status": "N",
+      "office_full": "President",
+      "incumbent_challenge_full": "Challenger",
+      "active_through": 2004,
+      "election_districts": [
+        "00"
+      ],
+      "cycles": [
+        2002,
+        2004
+      ],
+      "party": "IND",
+      "load_date": "2002-04-12T00:00:00",
+      "incumbent_challenge": "C",
+      "name": "AABBATTE, MICHAEL THOMAS WITORT",
+      "state": "US",
+      "flags": "P40002172",
+      "office": "P",
+      "federal_funds_flag": false,
+      "has_raised_funds": false,
+      "party_full": "INDEPENDENT",
+      "district": "00"
+    }
+  ],
+  "pagination": {
+    "per_page": 20,
+    "pages": 1862,
+    "count": 37237,
+    "page": 1
+  },
+  "api_version": "1.0"
+}

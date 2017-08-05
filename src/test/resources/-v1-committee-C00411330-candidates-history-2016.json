@@ -1,0 +1,56 @@
+{
+  "results": [
+    {
+      "office_full": "Senate",
+      "office": "S",
+      "incumbent_challenge": "I",
+      "district": "00",
+      "election_years": [
+        1976,
+        2006,
+        2012,
+        2018
+      ],
+      "load_date": "2016-11-17T06:10:49",
+      "address_zip": null,
+      "party_full": "INDEPENDENT",
+      "candidate_id": "S4VT00033",
+      "address_state": "VT",
+      "party": "IND",
+      "state": "VT",
+      "address_street_1": null,
+      "election_districts": [
+        "00",
+        "00",
+        "00",
+        "00"
+      ],
+      "incumbent_challenge_full": "Incumbent",
+      "address_street_2": null,
+      "address_city": "BURLINGTON",
+      "name": "SANDERS, BERNARD",
+      "flags": "S4VT00033",
+      "two_year_period": 2016,
+      "cycles": [
+        1976,
+        2006,
+        2008,
+        2010,
+        2012,
+        2014,
+        2016,
+        2018
+      ],
+      "district_number": 0,
+      "candidate_status": "F",
+      "candidate_inactive": false
+    }
+  ],
+  "api_version": "1.0",
+  "pagination": {
+    "pages": 1,
+    "page": 1,
+    "count": 1,
+    "per_page": 20
+  }
+}

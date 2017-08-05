@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "address_zip": "99901",
+      "office_full": "House",
+      "incumbent_challenge": null,
+      "district": "00",
+      "election_years": [
+        1980
+      ],
+      "load_date": "2002-03-30T00:00:00",
+      "is_election": false,
+      "federal_funds_flag": false,
+      "receipts": 1116,
+      "has_raised_funds": true,
+      "party_full": "DEMOCRATIC PARTY",
+      "candidate_id": "H0AK00014",
+      "office": "H",
+      "cycle": 1980,
+      "address_state": "AK",
+      "party": "DEM",
+      "state": "AK",
+      "coverage_end_date": "1980-10-15T00:00:00",
+      "election_year": 1980,
+      "address_street_1": "RT 1/BOX 198",
+      "candidate_inactive": false,
+      "incumbent_challenge_full": null,
+      "election_districts": [
+        "00"
+      ],
+      "coverage_start_date": null,
+      "cash_on_hand_end_period": null,
+      "address_city": "KETCHIKAW",
+      "name": "WHITTAKER, RICHARD",
+      "debts_owed_by_committee": null,
+      "district_number": 0,
+      "cycles": [
+        1980
+      ],
+      "two_year_period": 1980,
+      "candidate_status": "C",
+      "disbursements": 764,
+      "address_street_2": null
+    }
+  ],
+  "api_version": "1.0",
+  "pagination": {
+    "pages": 2610,
+    "page": 1,
+    "count": 52200,
+    "per_page": 20
+  }
+}

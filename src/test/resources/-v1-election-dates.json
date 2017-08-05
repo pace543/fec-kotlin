@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "election_party": null,
+      "election_type_full": "Special election general",
+      "office_sought": "S",
+      "primary_general_date": "2017-02-23T17:39:12.598385",
+      "election_year": 2017,
+      "create_date": "2017-02-23T12:30:53+00:00",
+      "election_date": "2017-12-12",
+      "election_notes": "Sen. Jeff Sessions' Seat.",
+      "update_date": "2017-05-09T15:13:25+00:00",
+      "election_type_id": "SG",
+      "election_state": "AL"
+    }
+  ],
+  "pagination": {
+    "per_page": 20,
+    "pages": 108,
+    "count": 2160,
+    "page": 1
+  },
+  "api_version": "1.0"
+}

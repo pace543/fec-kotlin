@@ -28,136 +28,140 @@ data class ReportDatePage(val pagination: OffsetInfo?, val results: List<ReportD
 
 data class OffsetInfo(
     @SerializedName("count")
-    @Expose()
+    @Expose
     val count: Int?,
 
     @SerializedName("page")
-    @Expose()
+    @Expose
     val page: Int?,
 
     @SerializedName("pages")
-    @Expose()
+    @Expose
     val pages: Int?,
 
     @SerializedName("per_page")
-    @Expose()
+    @Expose
     val perPage: Int?
 )
 
 data class CalendarDate(
-    @SerializedName("all_day")
-    @Expose()
+        @SerializedName("all_day")
+        @Expose
     val allDay: Boolean?,
 
-    @SerializedName("category")
-    @Expose()
+        @SerializedName("category")
+        @Expose
     val category: String?,
 
-    @SerializedName("description")
-    @Expose()
+        @SerializedName("description")
+        @Expose
     val description: String?,
 
-    @SerializedName("end_date")
-    @Expose()
+        @SerializedName("end_date")
+        @Expose
     val endDate: String?,
 
-    @SerializedName("location")
-    @Expose()
+        @SerializedName("event_id")
+        @Expose
+        val eventId: Int?,
+
+        @SerializedName("location")
+        @Expose
     val location: String?,
 
-    @SerializedName("start_date")
-    @Expose()
+        @SerializedName("start_date")
+        @Expose
     val startDate: String?,
 
-    @SerializedName("state")
-    @Expose()
+        @SerializedName("state")
+        @Expose
     val state: List<String>?,
 
-    @SerializedName("summary")
-    @Expose()
+        @SerializedName("summary")
+        @Expose
     val summary: String?,
 
-    @SerializedName("url")
-    @Expose()
+        @SerializedName("url")
+        @Expose
     val url: String?
 )
 
 data class ElectionDate(
     @SerializedName("active_election")
-    @Expose()
+    @Expose
     val activeElection: Boolean?,
 
     @SerializedName("create_date")
-    @Expose()
+    @Expose
     val createDate: String?,
 
     @SerializedName("election_date")
-    @Expose()
+    @Expose
     val electionDate: String?,
 
     @SerializedName("election_district")
-    @Expose()
+    @Expose
     val electionDistrict: Int?,
 
     @SerializedName("election_notes")
-    @Expose()
+    @Expose
     val electionNotes: String?,
 
     @SerializedName("election_party")
-    @Expose()
+    @Expose
     val electionParty: String?,
 
     @SerializedName("election_state")
-    @Expose()
+    @Expose
     val electionState: String?,
 
     @SerializedName("election_type_full")
-    @Expose()
+    @Expose
     val electionTypeFull: String?,
 
     @SerializedName("election_type_id")
-    @Expose()
+    @Expose
     val electionTypeId: String?,
 
     @SerializedName("election_year")
-    @Expose()
+    @Expose
     val electionYear: Int?,
 
     @SerializedName("office_sought")
-    @Expose()
+    @Expose
     val officeSought: String?,
 
     @SerializedName("primary_general_date")
-    @Expose()
+    @Expose
     val primaryGeneralDate: String?,
 
     @SerializedName("update_date")
-    @Expose()
+    @Expose
     val updateDate: String?
 )
 
 data class ReportDate(
     @SerializedName("create_date")
-    @Expose()
+    @Expose
     val createDate: String?,
 
     @SerializedName("due_date")
-    @Expose()
+    @Expose
     val dueDate: String?,
 
     @SerializedName("report_type")
-    @Expose()
+    @Expose
     val reportType: String?,
 
     @SerializedName("report_type_full")
-    @Expose()
+    @Expose
     val reportTypeFull: String?,
 
     @SerializedName("report_year")
-    @Expose()
+    @Expose
     val reportYear: Int?,
 
     @SerializedName("update_date")
-    @Expose()
+    @Expose
     val updateDate: String?
 )

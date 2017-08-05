@@ -1,0 +1,39 @@
+{
+  "results": [
+    {
+      "election_years": [
+        2014
+      ],
+      "district_number": 4,
+      "candidate_id": "H4UT04052",
+      "candidate_status": "N",
+      "office_full": "House",
+      "incumbent_challenge_full": "Open seat",
+      "principal_committees": [],
+      "election_districts": [
+        "04"
+      ],
+      "cycles": [
+        2014
+      ],
+      "party": "IAP",
+      "load_date": "2014-03-22T21:40:34",
+      "incumbent_challenge": "O",
+      "name": "AALDERS, TIM",
+      "state": "UT",
+      "party_full": "INDEPENDENT AMERICAN PARTY",
+      "office": "H",
+      "federal_funds_flag": false,
+      "has_raised_funds": false,
+      "active_through": 2014,
+      "district": "04"
+    }
+  ],
+  "pagination": {
+    "per_page": 20,
+    "pages": 1862,
+    "count": 37237,
+    "page": 1
+  },
+  "api_version": "1.0"
+}

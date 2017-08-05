@@ -1,0 +1,44 @@
+{
+  "results": [
+    {
+      "office_full": "President",
+      "office": "P",
+      "incumbent_challenge": "O",
+      "district": "00",
+      "election_years": [
+        2016
+      ],
+      "load_date": "2016-11-17T06:10:49",
+      "address_zip": "05408",
+      "party_full": "DEMOCRATIC PARTY",
+      "candidate_id": "P60007168",
+      "address_state": "VT",
+      "party": "DEM",
+      "state": "US",
+      "address_street_1": "221 VAN PATTEN PKWY",
+      "election_districts": [
+        "00"
+      ],
+      "incumbent_challenge_full": "Open seat",
+      "address_street_2": null,
+      "address_city": "BURLINGTON",
+      "name": "SANDERS, BERNARD",
+      "flags": "P60007168",
+      "two_year_period": 2016,
+      "cycles": [
+        2016,
+        2018
+      ],
+      "district_number": 0,
+      "candidate_status": "C",
+      "candidate_inactive": false
+    }
+  ],
+  "api_version": "1.0",
+  "pagination": {
+    "pages": 1,
+    "page": 1,
+    "count": 1,
+    "per_page": 20
+  }
+}
