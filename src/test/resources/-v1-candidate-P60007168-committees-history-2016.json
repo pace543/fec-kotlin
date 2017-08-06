@@ -1,0 +1,37 @@
+{
+  "api_version": "1.0",
+  "pagination": {
+    "page": 1,
+    "per_page": 20,
+    "pages": 1,
+    "count": 12
+  },
+  "results": [
+    {
+      "party": null,
+      "cycles": [
+        2016
+      ],
+      "street_1": "35 WEST ROAD",
+      "state": "NH",
+      "party_full": null,
+      "committee_id": "C00590240",
+      "city": "CLARKSVILLE",
+      "cycle": 2016,
+      "organization_type": null,
+      "candidate_ids": [
+        "P60007168"
+      ],
+      "street_2": null,
+      "zip": "03592",
+      "organization_type_full": null,
+      "name": "NORTHEAST MUSICIANS FOR SOCIAL DEMOCRACY",
+      "designation": "U",
+      "designation_full": "Unauthorized",
+      "state_full": "New Hampshire",
+      "committee_type": "N",
+      "committee_type_full": "PAC - Nonqualified",
+      "treasurer_name": "JANE BRICKETT"
+    }
+  ]
+}

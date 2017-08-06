@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "committee_type": "P",
+      "candidate_ids": [
+        "P20001954"
+      ],
+      "organization_type": null,
+      "treasurer_name": "EDEAN BUNDICK",
+      "designation": "P",
+      "committee_type_full": "Presidential",
+      "name": "007 GO GODWIN COMMITTEE",
+      "committee_id": "C00462390",
+      "party_full": "DEMOCRATIC PARTY",
+      "cycles": [
+        2016,
+        2014,
+        2012,
+        2010
+      ],
+      "party": "DEM",
+      "state": "VA",
+      "organization_type_full": null,
+      "designation_full": "Principal campaign committee"
+    }
+  ],
+  "api_version": "1.0",
+  "pagination": {
+    "pages": 2978,
+    "page": 1,
+    "count": 59550,
+    "per_page": 20
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "zip": "03766",
+      "treasurer_name": "STEPHEN T LEBLANC",
+      "city": "LEBANON",
+      "state_full": "New Hampshire",
+      "candidate_ids": [
+        "P60007168"
+      ],
+      "organization_type": null,
+      "street_1": "9 AMSDEN STREET",
+      "designation": "U",
+      "street_2": null,
+      "name": "UPPER VALLEY FOR BERNIE SANDERS",
+      "committee_type_full": "Single Candidate Independent Expenditure",
+      "committee_id": "C00590828",
+      "party_full": null,
+      "committee_type": "U",
+      "cycles": [
+        2016,
+        2018
+      ],
+      "party": null,
+      "cycle": 2018,
+      "state": "NH",
+      "organization_type_full": null,
+      "designation_full": "Unauthorized"
+    }
+  ],
+  "api_version": "1.0",
+  "pagination": {
+    "pages": 1,
+    "page": 1,
+    "count": 17,
+    "per_page": 20
+  }
+}

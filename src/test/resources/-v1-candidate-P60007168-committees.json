@@ -1,0 +1,72 @@
+{
+  "api_version": "1.0",
+  "pagination": {
+    "page": 1,
+    "per_page": 20,
+    "pages": 1,
+    "count": 12
+  },
+  "results": [
+    {
+      "treasurer_name_1": "SUSAN",
+      "party_type": null,
+      "form_type": "F1",
+      "custodian_city": "BURLINGTON",
+      "party_full": "DEMOCRATIC PARTY",
+      "street_2": null,
+      "organization_type": null,
+      "leadership_pac": null,
+      "cycles": [
+        2016,
+        2018
+      ],
+      "custodian_street_2": null,
+      "treasurer_city": "BURLINGTON",
+      "email": "COMPLIANCE@BERNIESANDERS.COM",
+      "qualifying_date": null,
+      "organization_type_full": null,
+      "website": "BERNIESANDERS.COM",
+      "custodian_name_1": "SUSAN",
+      "filing_frequency": "Q",
+      "treasurer_name_title": "TREASURER",
+      "party_type_full": null,
+      "treasurer_street_2": null,
+      "committee_id": "C00577130",
+      "treasurer_name_2": "JACKSON",
+      "treasurer_zip": "05402",
+      "committee_type_full": "Presidential",
+      "fax": null,
+      "treasurer_name": "JACKSON, SUSAN",
+      "custodian_state": "VT",
+      "treasurer_street_1": "P.O. BOX 905",
+      "street_1": "PO BOX 905",
+      "city": "BURLINGTON",
+      "treasurer_state": "VT",
+      "treasurer_name_suffix": null,
+      "lobbyist_registrant_pac": null,
+      "party": "DEM",
+      "zip": "05402",
+      "designation": "P",
+      "state": "VT",
+      "treasurer_name_prefix": null,
+      "state_full": "Vermont",
+      "custodian_name_prefix": null,
+      "candidate_ids": [
+        "P60007168"
+      ],
+      "custodian_name_middle": null,
+      "custodian_name_suffix": null,
+      "custodian_name_title": "TREASURER",
+      "treasurer_name_middle": null,
+      "treasurer_phone": "8554237643",
+      "custodian_phone": "8554237643",
+      "committee_type": "P",
+      "name": "BERNIE 2016",
+      "custodian_street_1": "P.O. BOX 905",
+      "designation_full": "Principal campaign committee",
+      "custodian_name_full": "JACKSON, SUSAN",
+      "custodian_name_2": "JACKSON",
+      "custodian_zip": "05402"
+    }
+  ]
+}

@@ -79,7 +79,6 @@ class OpenFECClient(key: String, url: String = "https://api.open.fec.gov/v1") {
 
     // /filings/ endpoints
     fun getFilingsFromCandidate(candidateId: String, params: ParamsList) {}
-
     fun getFilingsFromCommittee(committeeId: String, params: ParamsList) {}
     fun getFilings(params: ParamsList) {}
 
