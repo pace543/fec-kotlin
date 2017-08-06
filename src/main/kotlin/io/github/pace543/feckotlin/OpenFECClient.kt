@@ -56,47 +56,49 @@ class OpenFECClient(key: String, url: String = "https://api.open.fec.gov/v1") {
             "/committee/$committeeId/candidates/history/$cycle".httpGet(params).rx_object(CandidateHistoryPage.Deserializer())
 
     // /committee/ endpoints
-    fun getCommitteesFromCandidate(candidateId: String, params: ParamsList? = null) =
+    fun getCommitteesFromCandidate(candidateId: String, params: ParamsList? = null): OpenFECResult<CommitteeDetailPage> =
             "/candidate/$candidateId/committees".httpGet(params).rx_object(CommitteeDetailPage.Deserializer())
 
-    fun getCommitteesHistoryFromCandidate(candidateId: String, params: ParamsList? = null) =
+    fun getCommitteesHistoryFromCandidate(candidateId: String, params: ParamsList? = null): OpenFECResult<CommitteeHistoryPage> =
             "/candidate/$candidateId/committees/history".httpGet(params).rx_object(CommitteeHistoryPage.Deserializer())
 
-    fun getCommitteesHistoryByCycleFromCandidate(candidateId: String, cycle: Int, params: ParamsList? = null) =
+    fun getCommitteesHistoryByCycleFromCandidate(candidateId: String, cycle: Int, params: ParamsList? = null): OpenFECResult<CommitteeHistoryPage> =
             "/candidate/$candidateId/committees/history/$cycle".httpGet(params).rx_object(CommitteeHistoryPage.Deserializer())
 
-    fun getCommittee(committeeId: String, params: ParamsList? = null) =
+    fun getCommittee(committeeId: String, params: ParamsList? = null): OpenFECResult<CommitteeDetailPage> =
             "/committee/$committeeId".httpGet(params).rx_object(CommitteeDetailPage.Deserializer())
 
-    fun getCommitteeHistory(committeeId: String, params: ParamsList? = null) =
+    fun getCommitteeHistory(committeeId: String, params: ParamsList? = null): OpenFECResult<CommitteeHistoryPage> =
             "/committee/$committeeId/history".httpGet(params).rx_object(CommitteeHistoryPage.Deserializer())
 
-    fun getCommitteeHistoryByCycle(committeeId: String, cycle: Int, params: ParamsList? = null) =
+    fun getCommitteeHistoryByCycle(committeeId: String, cycle: Int, params: ParamsList? = null): OpenFECResult<CommitteeHistoryPage> =
             "/committee/$committeeId/history/$cycle".httpGet(params).rx_object(CommitteeHistoryPage.Deserializer())
 
-    fun getCommittees(params: ParamsList? = null) =
+    fun getCommittees(params: ParamsList? = null): OpenFECResult<CommitteePage> =
             "/committees".httpGet(params).rx_object(CommitteePage.Deserializer())
 
     // /filings/ endpoints
-    fun getFilingsFromCandidate(candidateId: String, params: ParamsList) {}
-    fun getFilingsFromCommittee(committeeId: String, params: ParamsList) {}
-    fun getFilings(params: ParamsList) {}
+    fun getFilingsFromCandidate(candidateId: String, params: ParamsList? = null): OpenFECResult<FilingsPage> =
+            "/candidate/$candidateId/filings".httpGet(params).rx_object(FilingsPage.Deserializer())
+
+    fun getFilingsFromCommittee(committeeId: String, params: ParamsList? = null): OpenFECResult<FilingsPage> =
+            "/committee/$committeeId/filings".httpGet(params).rx_object(FilingsPage.Deserializer())
+
+    fun getFilings(params: ParamsList? = null): OpenFECResult<FilingsPage> =
+            "/filings".httpGet(params).rx_object(FilingsPage.Deserializer())
 
     // /communication costs/ endpoints
     fun getCommunicationCostsByCandidateFromCommittee(committeeId: String, params: ParamsList) {}
-
     fun getCommunicationCosts(params: ParamsList) {}
     fun getCommunicationCostsByCandidate(params: ParamsList) {}
 
     // /electioneering/ endpoints
     fun getElectioneeringByCandidateFromCommittee(committeeId: String, params: ParamsList) {}
-
     fun getELectioneering(params: ParamsList) {}
     fun getElectioneeringByCandidate(params: ParamsList) {}
 
     // /financial/ endpoints
     fun getReportsFromCommittee(committeeId: String, params: ParamsList) {}
-
     fun getTotalsFromCommittee(committeeId: String, params: ParamsList) {}
     fun getElections(params: ParamsList) {}
     fun getElectionsSearch(params: ParamsList) {}
@@ -107,7 +109,6 @@ class OpenFECClient(key: String, url: String = "https://api.open.fec.gov/v1") {
 
     // /receipts/ endpoints
     fun getScheduleAByEmployerFromCommittee(committeeId: String, params: ParamsList) {}
-
     fun getScheduleAByOccupationFromCommittee(committeeId: String, params: ParamsList) {}
     fun getScheduleABySizeFromCommittee(committeeId: String, params: ParamsList) {}
     fun getScheduleAByStateFromCommittee(committeeId: String, params: ParamsList) {}
@@ -126,7 +127,6 @@ class OpenFECClient(key: String, url: String = "https://api.open.fec.gov/v1") {
 
     // /disbursements/ endpoints
     fun getScheduleBByPurposeFromCommittee(committeeId: String, params: ParamsList) {}
-
     fun getScheduleBByRecipientFromCommittee(committeeId: String, params: ParamsList) {}
     fun getScheduleBByRecipientIdFromCommittee(committeeId: String, params: ParamsList) {}
     fun getScheduleB(params: ParamsList) {}
@@ -138,19 +138,16 @@ class OpenFECClient(key: String, url: String = "https://api.open.fec.gov/v1") {
 
     // /independent expenditures/ endpoints
     fun getScheduleEByCandidateFromCommittee(committeeId: String, params: ParamsList) {}
-
     fun getScheduleE(params: ParamsList) {}
     fun getScheduleEByCandidate(params: ParamsList) {}
     fun getScheduleEEFile(params: ParamsList) {}
 
     // /efiling/ endpoints
     fun getEfileFilings(params: ParamsList) {}
-
     fun getEfileReportsByCommitteeType(committeeType: String, params: ParamsList) {}
 
     // /search/ endpoints
     fun searchCandidatesByName(params: ParamsList) {}
-
     fun searchCommitteesByName(params: ParamsList) {}
 
     // /filer resources/ endpoint
@@ -158,17 +155,14 @@ class OpenFECClient(key: String, url: String = "https://api.open.fec.gov/v1") {
 
     // /loans/ endpoints
     fun getScheduleC(params: ParamsList) {}
-
     fun getScheduleCFromSubId(subId: String, params: ParamsList) {}
 
     // /debts/ endpoints
     fun getScheduleD(params: ParamsList) {}
-
     fun getScheduleDFromSubId(subId: String, params: ParamsList) {}
 
     // /party-coordinated expenditures/ endpoints
     fun getScheduleF(params: ParamsList) {}
-
     fun getScheduleFFromSubId(subId: String, params: ParamsList) {}
 }
 

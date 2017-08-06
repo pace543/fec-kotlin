@@ -1,5 +1,199 @@
 package io.github.pace543.feckotlin.test
 
-class FilingsTest {
+import io.github.pace543.feckotlin.model.Filings
+import io.github.pace543.feckotlin.model.OffsetInfo
+import org.junit.Assert.*
+import org.junit.Test
 
+class FilingsTest {
+    @Test
+    fun testGetFilingsFromCandidate() {
+        mockClient.getFilingsFromCandidate("P60007168").subscribe {
+            res ->
+            assertNotNull(res)
+            res.apply {
+                val data = res.get()
+                assertEquals(OffsetInfo(pages = 1, count = 1, page = 1, perPage = 20), data.pagination)
+                val result = data.results?.get(0) as Filings
+                assertEquals(-9144826, result.previousFileNumber)
+                assertEquals("P60007168", result.committeeId)
+                assertNull(result.fecFileId)
+                assertEquals("Statement of candidacy 2015", result.documentDescription)
+                assertEquals("P60007168", result.candidateId)
+                assertEquals(3, result.pages)
+                assertNull(result.debtsOwedByCommittee)
+                assertNull(result.documentTypeFull)
+                assertEquals("2015-04-30T00:00:00", result.receiptDate)
+                assertNull(result.totalCommunicationCost)
+                assertEquals(2015, result.reportYear)
+                assertNull(result.csvUrl)
+                assertNull(result.requestType)
+                assertEquals("15031422533", result.beginningImageNumber)
+                assertEquals("paper", result.meansFiled)
+                assertEquals("15031422535", result.endingImageNumber)
+                assertNull(result.totalIndependentExpenditures)
+                assertEquals(2016, result.cycle)
+                assertNull(result.mostRecentFileNumber)
+                assertNull(result.totalIndividualContributions)
+                assertEquals(-9144826, result.fileNumber)
+                assertEquals("2015-05-01T21:00:14", result.updateDate)
+                assertNull(result.reportType)
+                assertEquals(2016, result.electionYear)
+                assertNull(result.netDonations)
+                assertNull(result.senatePersonalFunds)
+                assertNull(result.committeeName)
+                assertNull(result.totalDisbursements)
+                assertEquals("F2", result.formType)
+                assertEquals("http://docquery.fec.gov/pdf/533/15031422533/15031422533.pdf", result.pdfUrl)
+                assertNull(result.reportTypeFull)
+                assertEquals("N", result.amendmentIndicator)
+                assertNull(result.htmlUrl)
+                assertNull(result.debtsOwedToCommittee)
+                assertNull(result.amendmentVersion)
+                assertNull(result.coverageStartDate)
+                assertNull(result.treasurerName)
+                assertEquals("SANDERS, BERNARD", result.candidateName)
+                assertNull(result.housePersonalFunds)
+                assertNull(result.primaryGeneralIndicator)
+                assertNull(result.mostRecent)
+                assertNull(result.oppositionPersonalFunds)
+                assertNull(result.amendmentChain)
+                assertEquals("1050120150017429798", result.subId)
+                assertNull(result.cashOnHandEndPeriod)
+                assertNull(result.totalReceipts)
+                assertNull(result.documentType)
+                assertNull(result.cashOnHandBeginningPeriod)
+                assertNull(result.coverageEndDate)
+                assertNull(result.isAmended)
+            }
+        }
+    }
+
+    @Test
+    fun testGetFilingsFromCommittee() {
+        mockClient.getFilingsFromCommittee("C00411330").subscribe {
+            res ->
+            assertNotNull(res)
+            res.apply {
+                val data = res.get()
+                assertEquals(OffsetInfo(pages = 10, page = 1, count = 199, perPage = 20), data.pagination)
+                val result = data.results?.get(0) as Filings
+                assertEquals("Q2", result.reportType)
+                assertEquals("FEC-1173153", result.fecFileId)
+                assertEquals("1071820170035541954", result.subId)
+                assertNull(result.housePersonalFunds)
+                assertNull(result.mostRecentFileNumber)
+                assertEquals("2017-08-03T20:52:48", result.updateDate)
+                assertEquals("201707170200174707", result.endingImageNumber)
+                assertNull(result.candidateName)
+                assertNull(result.oppositionPersonalFunds)
+                assertEquals("201707170200173893", result.beginningImageNumber)
+                assertEquals("JULY QUARTERLY 2017", result.documentDescription)
+                assertNull(result.mostRecent)
+                assertEquals("N", result.amendmentIndicator)
+                assertEquals(0.0, result.debtsOwedByCommittee)
+                assertNull(result.requestType)
+                assertEquals("P", result.primaryGeneralIndicator)
+                assertNull(result.senatePersonalFunds)
+                assertNull(result.netDonations)
+                assertEquals("C00411330", result.committeeId)
+                assertEquals("FRIENDS OF BERNIE SANDERS", result.committeeName)
+                assertEquals(1289314.0, result.totalReceipts)
+                assertEquals("2017-07-14T00:00:00", result.receiptDate)
+                assertEquals(0.0, result.debtsOwedToCommittee)
+                assertEquals(2018, result.cycle)
+                assertEquals(815, result.pages)
+                assertEquals(4852006.0, result.cashOnHandEndPeriod)
+                assertNull(result.totalIndividualContributions)
+                assertNull(result.amendmentVersion)
+                assertEquals("http://docquery.fec.gov/paper/posted/1173153.fec", result.fecUrl)
+                assertEquals("F3", result.formType)
+                assertNull(result.htmlUrl)
+                assertNull(result.candidateId)
+                assertNull(result.amendmentChain)
+                assertNull(result.electionYear)
+                assertEquals("http://docquery.fec.gov/pdf/893/201707170200173893/201707170200173893.pdf", result.pdfUrl)
+                assertEquals(1173153, result.fileNumber)
+                assertEquals("http://docquery.fec.gov/csv/153/1173153.csv", result.csvUrl)
+                assertNull(result.documentType)
+                assertNull(result.totalIndependentExpenditures)
+                assertNull(result.documentTypeFull)
+                assertNull(result.treasurerName)
+                assertEquals(315139.0, result.totalDisbursements)
+                assertEquals(2017, result.reportYear)
+                assertEquals("2017-04-01T00:00:00", result.coverageStartDate)
+                assertEquals(3877831.0, result.cashOnHandBeginningPeriod)
+                assertEquals(-9502064, result.previousFileNumber)
+                assertEquals("JULY QUARTERLY", result.reportTypeFull)
+                assertEquals("2017-06-30T00:00:00", result.coverageEndDate)
+                assertNull(result.isAmended)
+                assertEquals("paper", result.meansFiled)
+                assertNull(result.totalCommunicationCost)
+            }
+        }
+    }
+
+    @Test
+    fun testGetFilings() {
+        mockClient.getFilings().subscribe {
+            res ->
+            assertNotNull(res)
+            res.apply {
+                val data = res.get()
+                assertEquals(OffsetInfo(page = 1, perPage = 20, pages = 155370, count = 3107383), data.pagination)
+                val result = data.results?.get(0) as Filings
+                assertEquals("2016-07-13T20:49:40", result.updateDate)
+                assertEquals("2016-04-01T00:00:00", result.coverageStartDate)
+                assertEquals(2016, result.reportYear)
+                assertNull(result.cashOnHandEndPeriod)
+                assertEquals("F7", result.formType)
+                assertNull(result.isAmended)
+                assertNull(result.senatePersonalFunds)
+                assertEquals("TEXAS FARM BUREAU", result.committeeName)
+                assertEquals(2016, result.cycle)
+                assertNull(result.requestType)
+                assertNull(result.totalReceipts)
+                assertNull(result.totalIndependentExpenditures)
+                assertEquals("paper", result.meansFiled)
+                assertNull(result.candidateName)
+                assertEquals(3, result.pages)
+                assertEquals("http://docquery.fec.gov/csv/726/1081726.csv", result.csvUrl)
+                assertEquals("JULY QUARTERLY", result.reportTypeFull)
+                assertEquals("201607070300079703", result.beginningImageNumber)
+                assertNull(result.netDonations)
+                assertNull(result.oppositionPersonalFunds)
+                assertNull(result.receiptDate)
+                assertNull(result.totalDisbursements)
+                assertNull(result.debtsOwedByCommittee)
+                assertEquals("http://docquery.fec.gov/paper/posted/1081726.fec", result.fecUrl)
+                assertEquals("1070720160028265398", result.subId)
+                assertNull(result.totalIndividualContributions)
+                assertNull(result.cashOnHandBeginningPeriod)
+                assertEquals("JULY QUARTERLY 2016", result.documentDescription)
+                assertNull(result.treasurerName)
+                assertNull(result.candidateId)
+                assertEquals(1081726, result.fileNumber)
+                assertEquals(7915.0, result.totalCommunicationCost)
+                assertEquals("2016-06-30T00:00:00", result.coverageEndDate)
+                assertNull(result.previousFileNumber)
+                assertEquals("N", result.amendmentIndicator)
+                assertNull(result.amendmentVersion)
+                assertEquals("201607070300079705", result.endingImageNumber)
+                assertNull(result.electionYear)
+                assertEquals("C70003165", result.committeeId)
+                assertNull(result.mostRecentFileNumber)
+                assertEquals("Q2", result.reportType)
+                assertNull(result.documentTypeFull)
+                assertEquals("FEC-1081726", result.fecFileId)
+                assertNull(result.housePersonalFunds)
+                assertEquals("P", result.primaryGeneralIndicator)
+                assertNull(result.amendmentChain)
+                assertNull(result.htmlUrl)
+                assertNull(result.debtsOwedToCommittee)
+                assertNull(result.mostRecent)
+                assertNull(result.documentType)
+                assertEquals("http://docquery.fec.gov/pdf/703/201607070300079703/201607070300079703.pdf", result.pdfUrl)
+            }
+        }
+    }
 }
