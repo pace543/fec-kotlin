@@ -1,0 +1,21 @@
+{
+  "api_version": "1.0",
+  "pagination": {
+    "pages": 1459,
+    "count": 29169,
+    "page": 1,
+    "per_page": 20
+  },
+  "results": [
+    {
+      "candidate_name": "MICHAUD, MICHAEL H",
+      "committee_id": "C00000372",
+      "cycle": 2002,
+      "committee_name": "MAINTENANCE OF WAY POLITICAL LEAGUE",
+      "candidate_id": "H2ME02097",
+      "count": 1,
+      "total": 1000,
+      "support_oppose_indicator": "O"
+    }
+  ]
+}

@@ -88,9 +88,14 @@ class OpenFECClient(key: String, url: String = "https://api.open.fec.gov/v1") {
             "/filings".httpGet(params).rx_object(FilingsPage.Deserializer())
 
     // /communication costs/ endpoints
-    fun getCommunicationCostsByCandidateFromCommittee(committeeId: String, params: ParamsList) {}
-    fun getCommunicationCosts(params: ParamsList) {}
-    fun getCommunicationCostsByCandidate(params: ParamsList) {}
+    fun getCommunicationCostsByCandidateFromCommittee(committeeId: String, params: ParamsList? = null): OpenFECResult<CommunicationCostByCandidatePage> =
+            "/committee/$committeeId/communication_costs/by_candidate".httpGet(params).rx_object(CommunicationCostByCandidatePage.Deserializer())
+
+    fun getCommunicationCosts(params: ParamsList? = null): OpenFECResult<CommunicationCostPage> =
+            "/communication-costs".httpGet(params).rx_object(CommunicationCostPage.Deserializer())
+
+    fun getCommunicationCostsByCandidate(params: ParamsList? = null): OpenFECResult<CommunicationCostByCandidatePage> =
+            "/communication_costs/by_candidate".httpGet(params).rx_object(CommunicationCostByCandidatePage.Deserializer())
 
     // /electioneering/ endpoints
     fun getElectioneeringByCandidateFromCommittee(committeeId: String, params: ParamsList) {}

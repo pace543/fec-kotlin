@@ -1,0 +1,48 @@
+{
+  "api_version": "1.0",
+  "pagination": {
+    "pages": 3948,
+    "count": 78953,
+    "per_page": 20
+  },
+  "results": [
+    {
+      "form_type_code": "F7",
+      "committee_id": "C70003009",
+      "state_full": null,
+      "candidate_first_name": null,
+      "candidate_id": "H2AL02067",
+      "pdf_url": "http://docquery.fec.gov/pdf/588/25038722588/25038722588.pdf",
+      "transaction_type": "24F",
+      "communication_type_full": null,
+      "candidate_name": null,
+      "support_oppose_indicator": null,
+      "candidate_office_district": null,
+      "committee_name": "BUSINESS COUNCIL OF ALABAMA",
+      "candidate_office_full": null,
+      "purpose": null,
+      "report_year": 2004,
+      "original_sub_id": null,
+      "report_type": "YE",
+      "transaction_date": "2004-10-29T00:00:00",
+      "candidate_office_state": null,
+      "primary_general_indicator": "G",
+      "schedule_type_full": "FOR EACH COMMUNICATION",
+      "candidate_middle_name": null,
+      "tran_id": null,
+      "sub_id": 2021720051054604000,
+      "candidate_last_name": null,
+      "schedule_type": "F76",
+      "communication_class": null,
+      "image_number": "25038722588",
+      "candidate_office": null,
+      "cycle": 2004,
+      "action_code_full": "NO CHANGE",
+      "primary_general_indicator_description": "GENERAL",
+      "communication_type": null,
+      "file_number": null,
+      "action_code": "N",
+      "transaction_amount": 13
+    }
+  ]
+}
